@@ -513,7 +513,9 @@ body{
     row-gap: 48px;
 }
 
-.portfolio-item{}
+.portfolio-item{
+    display: block;
+}
 
 .portfolio-item:hover,
 .portfolio-item:focus{
