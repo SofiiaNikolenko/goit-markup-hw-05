@@ -497,6 +497,64 @@ body{
     background-color: var(--green-color);
 }
 
+/* ===modal window===  */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+
+    transition: opacity var(--transition-duration-and-func),
+        visibility var(--transition-duration-and-func);
+}
+
+.backdrop.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    width: 408px;
+    height: 576px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #FCFCFC;
+}
+
+.modal-close-button {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+
+    background: var(--coornflower-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    padding: 0;
+
+    transition: box-shadow var(--transition-duration-and-func);
+}
+
+.modal-close-button:hover,
+.modal-close-button:focus{
+    box-shadow: 0px 1px 6px rgb(46 47 66 / 8%), 0px 1px 1px rgb(46 47 66 / 16%), 0px 2px 1px rgb(46 47 66 / 8%);
+}
+
+.modal-close-svg{}
+
 /* ---------------------------- */
  /* ---------portfolio--------- */
  /* --------------------------- */
